@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -51,6 +51,7 @@ import { TheMealDbApiService } from './the-meal-db-api/the-meal-db-api.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClient,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatCheckboxModule,
