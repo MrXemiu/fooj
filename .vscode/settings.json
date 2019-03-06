@@ -1,5 +1,7 @@
 {
     "appService.zipIgnorePattern": [
         "node_modules{,/**}"
-    ]
+    ],
+    "appService.deploySubpath": "dist\\fooj",
+    "appService.defaultWebAppToDeploy": "/subscriptions/9be08847-17da-44fc-ac15-047f330b7b74/resourceGroups/demos/providers/Microsoft.Web/sites/fooj-ng"
 }
