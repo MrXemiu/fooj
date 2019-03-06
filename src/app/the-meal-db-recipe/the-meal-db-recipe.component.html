@@ -1,3 +1,100 @@
-<p>
-  the-meal-db-recipe works!
-</p>
+<a routerLink="/the-meal-db-search">Search Meals</a>
+<div style="width:100%; text-align: center;">
+  <div *ngIf="meal" class="recipe">
+    <mat-card>
+      <mat-card-title>{{meal.strMeal}}</mat-card-title>
+      <mat-card-content>
+        <div class="pure-g">
+          <div class="pure-u-1 pure-u-md-1-4">
+            <table class="ingredients">
+              <tr *ngIf="meal.strIngredient1">
+                <td>{{meal.strMeasure1}}</td>
+                <td>{{meal.strIngredient1}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient2">
+                <td>{{meal.strMeasure2}}</td>
+                <td>{{meal.strIngredient2}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient3">
+                <td>{{meal.strMeasure3}}</td>
+                <td>{{meal.strIngredient3}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient4">
+                <td>{{meal.strMeasure4}}</td>
+                <td>{{meal.strIngredient4}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient5">
+                <td>{{meal.strMeasure5}}</td>
+                <td>{{meal.strIngredient5}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient6">
+                <td>{{meal.strMeasure6}}</td>
+                <td>{{meal.strIngredient6}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient7">
+                <td>{{meal.strMeasure7}}</td>
+                <td>{{meal.strIngredient7}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient8">
+                <td>{{meal.strMeasure8}}</td>
+                <td>{{meal.strIngredient8}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient9">
+                <td>{{meal.strMeasure9}}</td>
+                <td>{{meal.strIngredient9}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient10">
+                <td>{{meal.strMeasure10}}</td>
+                <td>{{meal.strIngredient10}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient11">
+                <td>{{meal.strMeasure11}}</td>
+                <td>{{meal.strIngredient11}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient12">
+                <td>{{meal.strMeasure12}}</td>
+                <td>{{meal.strIngredient12}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient13">
+                <td>{{meal.strMeasure13}}</td>
+                <td>{{meal.strIngredient13}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient14">
+                <td>{{meal.strMeasure14}}</td>
+                <td>{{meal.strIngredient14}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient15">
+                <td>{{meal.strMeasure15}}</td>
+                <td>{{meal.strIngredient15}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient16">
+                <td>{{meal.strMeasure16}}</td>
+                <td>{{meal.strIngredient16}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient17">
+                <td>{{meal.strMeasure17}}</td>
+                <td>{{meal.strIngredient17}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient18">
+                <td>{{meal.strMeasure18}}</td>
+                <td>{{meal.strIngredient18}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient19">
+                <td>{{meal.strMeasure19}}</td>
+                <td>{{meal.strIngredient19}}</td>
+              </tr>
+              <tr *ngIf="meal.strIngredient20">
+                <td>{{meal.strMeasure20}}</td>
+                <td>{{meal.strIngredient20}}</td>
+              </tr>
+            </table>
+          </div>
+          <div class="pure-u-1 pure-u-md-3-4">
+            <p class="instructions"><img src={{meal.strMealThumb}}>{{meal.strInstructions}}
+            </p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>"

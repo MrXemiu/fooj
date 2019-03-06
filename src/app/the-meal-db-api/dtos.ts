@@ -57,3 +57,9 @@ export interface Category {
   strCategoryThumb: string;
   strCategoryDescription: string;
 }
+export interface Meals {
+  meals: Meal[];
+}
+export interface Categories {
+  meals: Category[];
+}

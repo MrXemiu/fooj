@@ -1,3 +1,50 @@
-<p>
-  the-meal-db-search works!
-</p>
+<div id="layout" class="pure-g">
+  <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+      <h1 class="brand-title">fooj</h1>
+      <h2 class="brand-tagline">the foods of booj</h2>
+    </div>
+    <div class="search-card">
+      <mat-card>
+        <mat-card-title>Search The Meal DB</mat-card-title>
+        <mat-card-content>
+          <form class="search-form">
+            <div class="meal-name-search">
+              <mat-form-field class="sidebar-field">
+                <input matInput placeholder="meal name" name="searchTerm" [(ngModel)]="viewModel.searchTerm">
+              </mat-form-field>
+              <button class="search-button" (click)="executeSearch()" mat-mini-fab>Go</button>
+            </div>
+            <p>Or search by...</p>
+            <mat-radio-group name="listOptions" [(ngModel)]="viewModel.listBy" (change)="listByChanged()">
+              <mat-radio-button value="category">Category</mat-radio-button>
+              <mat-radio-button value="ingredient">Ingredient</mat-radio-button>
+              <mat-radio-button value="region">Region</mat-radio-button>
+            </mat-radio-group><br />
+            <mat-form-field>
+              <mat-select placeholder="" [disabled]="!viewModel.listOptionsEnabled" (selectionChange)="filterSelectionChanged($event.value)">
+                <mat-option *ngFor="let option of viewModel.options" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="content pure-u-1 pure-u-md-3-4">
+    <div class="content-subhead">
+      Meals
+    </div>
+    <div class="results-wrapper">
+      <table class="search-result">
+        <tr *ngFor="let meal of viewModel.recipes$ | async">
+          <td><a routerLink="/recipe/{{meal.idMeal}}">{{meal.strMeal}}</a></td>
+          <td><a routerLink="/recipe/{{meal.idMeal}}"><img class="meal-thumb" src={{meal.strMealThumb}} /></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

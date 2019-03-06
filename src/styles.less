@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+#layout {
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  top: auto;
+  margin: 3em auto;
+
+  .brand-title,
+  .brand-tagline {
+    margin: 0;
+  }
+
+  .brand-title {
+    text-transform: lowercase;
+  }
+
+  .brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+  }
+}
+
+.sidebar {
+  background: rgb(61, 79, 93);
+  color: #fff;
+
+  .search-card {
+    padding: 1em;
+  }
+
+  .mat-radio-label-content {
+    padding-right: 1em !important;
+  }
+
+}
+
+.content {
+  .content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .results-wrapper {
+    padding: 1em;
+  }
+}

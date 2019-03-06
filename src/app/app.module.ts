@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -37,21 +38,19 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TheMealDbSearchComponent } from './the-meal-db-search/the-meal-db-search.component';
 import { TheMealDbRecipeComponent } from './the-meal-db-recipe/the-meal-db-recipe.component';
-import { TheMealDbSearchResultsComponent } from './the-meal-db-search-results/the-meal-db-search-results.component';
 import { TheMealDbApiService } from './the-meal-db-api/the-meal-db-api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TheMealDbSearchComponent,
-    TheMealDbRecipeComponent,
-    TheMealDbSearchResultsComponent
+    TheMealDbRecipeComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClient,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatCheckboxModule,
