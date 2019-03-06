@@ -23,8 +23,12 @@ export class TheMealDbRecipeComponent implements OnInit {
 
   getMeal() {
     const id = +this.route.snapshot.paramMap.get('idMeal');
-    this.theMealDbApiService
-      .getMealById(id)
-      .subscribe(meal => (this.meal = meal));
+    this.theMealDbApiService.getMealById(id).subscribe(meal => {
+      this.meal = meal;
+      this.meal.strInstructions = this.meal.strInstructions.replace(
+        '\r\n',
+        '</p><p>'
+      );
+    });
   }
 }
